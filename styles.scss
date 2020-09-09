@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Grandstander&display=swap");
+
+$font-size-small: 1.2rem;
+$font-size-medium: 1.4rem;
+$font-size-large: 1.6rem;
+
+$primary-color: #3d5af1;
+$secondary-color: #fdfdfd;
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+  font-family: "Grandstander", cursive;
+}
+body {
+  background-color: $secondary-color;
+}
+
+/* Header */
+.header,
+.container {
+  margin: 0 10rem;
+}
+.header {
+  margin-bottom: 5rem;
+}
+
+.navigation {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  &__item {
+    position: relative;
+    padding: 10px;
+    margin: 0px 10px;
+    font-size: $font-size-small;
+    // border-radius: 10px;
+    // border: 1px solid $primary-color;
+    // background-color: #fff;
+    color: $primary-color;
+    &::before {
+      display: block;
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0px;
+      height: 2px;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+        background-color: #2f89fc;
+      }
+    }
+
+    &--main {
+      font-size: $font-size-large;
+      color: $primary-color;
+      font-style: italic;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 5px;
+    }
+  }
+}
+
+.kittens {
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    max-width: 800px;
+    &__text {
+      padding: 0 10px;
+      line-height: 20px;
+    }
+    &__img {
+      padding: 0 10px;
+    }
+  }
+}
+.divider {
+  border-top: 1px solid rgba(61, 90, 241, 0.1);
+}
+.my-3 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#secret {
+  text-align: center;
+}
+.secret-div {
+  transition: all 2s ease-out;
+  max-height: 500px;
+  margin: 3rem 0;
+}
+
+.hidden-div {
+  transition: all 2s ease-out;
+  opacity: 0;
+  max-height: 0;
+}
